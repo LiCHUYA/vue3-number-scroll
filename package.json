@@ -1,8 +1,14 @@
 {
-  "name": "vuescdasdas",
-  "private": true,
-  "version": "0.0.0",
-  "type": "node",
+  "name": "vue3-number-scroll",
+  "version": "0.1.4",
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiCHUYA/vue3-scroll-number.git"
+  },
+  "main": "dist/vue3-number-scroll.js",
+  "module": "dist/vue3-number-scroll.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
@@ -15,7 +21,8 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
     "typescript": "^5.2.2",
-    "vite": "^5.3.1",
+    "vite": "^5.3.3",
+    "vite-plugin-dts": "^1.4.1",
     "vue-tsc": "^2.0.21"
   },
   "config": {

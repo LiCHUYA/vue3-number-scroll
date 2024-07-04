@@ -1,5 +1,53 @@
-# Vue 3 + TypeScript + Vite
+## 数字滚动使用指南
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**该组件用于创建具有动画效果的数字显示，可以配置起始值、结束值、动画持续时间等属性。以下是详细的传参和方法介绍：**
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+### 属性（Props）
+
+
+| **属性名**        | **类型**     | **默认值**    | **说明**                                                                                                 |
+| ----------------- | ------------ | ------------- | -------------------------------------------------------------------------------------------------------- |
+| `startVal`        | **Number**   | **0**         | **动画的起始值**                                                                                         |
+| `endVal`          | **Number**   | **2000**      | **动画的结束值**                                                                                         |
+| `duration`        | **Number**   | **3000**      | **动画持续时间（毫秒）**                                                                                 |
+| `autoplay`        | **Boolean**  | **true**      | **是否自动播放动画**                                                                                     |
+| `decimals`        | **Number**   | **0**         | **小数位数，必须为非负整数**                                                                             |
+| `decimal`         | **String**   | **'.'**       | **小数点字符**                                                                                           |
+| `separator`       | **String**   | **','**       | **千位分隔符**                                                                                           |
+| `prefix`          | **String**   | **''**        | **数字前缀**                                                                                             |
+| `suffix`          | **String**   | **''**        | **数字后缀**                                                                                             |
+| `useEasing`       | **Boolean**  | **true**      | **是否使用缓动函数**                                                                                     |
+| `easingFn`        | **Function** | **默认函数**  | **缓动函数，默认使用一个缓动函数（公式：**`c * (-Math.pow(2, -10 * t / d) + 1) * 1024 / 1023 + b`）      |
+| `repeatAnimation` | **Number**   | **undefined** | **重复动画的间隔时间（毫秒），如果未定义，则动画不会重复,传秒数,例如1000,代表1秒,动画则会在1秒执行一次** |
+
+### 事件（Events）
+
+
+| **事件名**        | **参数** | **说明**           |
+| ----------------- | -------- | ------------------ |
+| `callback`        | **-**    | **动画完成时触发** |
+| `mountedCallback` | -        | **组件挂载时触发** |
+
+### 方法（Methods）
+
+**组件暴露了一些控制动画的方法，可以使用通过实例来调用这些方法：**
+
+#### `start()`
+
+**开始动画。重置动画的开始时间，并重新计算显示值。**
+
+#### `pause()`
+
+**暂停动画。取消当前的**`requestAnimationFrame`。
+
+#### `resume()`
+
+**恢复动画。从暂停的时间点重新开始动画。**
+
+#### `pauseResume()`
+
+**切换动画的暂停和恢复状态。**
+
+#### `reset()`
+
+**重置动画。将显示值重置为起始值，并取消当前的**`requestAnimationFrame`。
