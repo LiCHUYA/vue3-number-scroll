@@ -2,14 +2,14 @@
   "name": "vuescdasdas",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "node",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "cz-customizable": "^7.0.0",
+    "cz-customizable": "^6.3.0",
     "vue": "^3.4.29"
   },
   "devDependencies": {
@@ -17,5 +17,10 @@
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
     "vue-tsc": "^2.0.21"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }
