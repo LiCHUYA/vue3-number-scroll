@@ -6,7 +6,7 @@
 
 ![这是图片](./Vue3NumberScroll.gif "Magic Gardens")
 
-**描述 **
+**描述**
 
 | 新特性                                                       | 支持               |
 | ------------------------------------------------------------ | ------------------ |
@@ -15,7 +15,7 @@
 | 良好的typescript支持                                         | :white_check_mark: |
 | 完善部分方法Api的语义化,新增一些新的属性                     | :white_check_mark: |
 
-**开始使用 **
+### 开始使用
 
 ```js
 npm i vue3-number-scroll
@@ -47,8 +47,6 @@ app.use(Vue3NumberScroll) //全局注册
 
 app.mount('#app')
 ```
-
-
 
 ### 属性（Props）
 
