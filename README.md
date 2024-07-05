@@ -1,19 +1,26 @@
 ## vue3-number-scroll使用指南
 
-​	**该组件用于创建具有动画效果的数字显示，可以配置起始值、结束值、动画持续时间等属性。**
+```
+```
 
-​	**它是基于 vue-count-to 升级改造,由于  [vue-count-to](https://panjiachen.github.io/countTo "原仓库地址") 不支持vue3,以及长时间没有更新的原因,我在项目中的大屏项目需要使用,所以顺便升级维护一下。**
+**该组件用于创建具有动画效果的数字显示，可以配置起始值、结束值、动画持续时间等属性。**
+
+```
+```
+
+**它是基于 vue-count-to 升级改造,由于  [vue-count-to](https://panjiachen.github.io/countTo "原仓库地址") 不支持vue3,以及长时间没有更新的原因,我在项目中的大屏项目需要使用,所以顺便升级维护一下。**
 
 ![这是图片](./Vue3NumberScroll.gif "Magic Gardens")
 
 **描述**
 
-| 新特性                                                       | 支持               |
-| ------------------------------------------------------------ | ------------------ |
-| 组件支持CamelCase和snake_case命名方式引入(本文档采用大驼峰命名展示) | :white_check_mark: |
-| 重构为Vue3所支持的Composition Api                            | :white_check_mark: |
-| 良好的typescript支持                                         | :white_check_mark: |
-| 完善部分方法Api的语义化,新增一些新的属性                     | :white_check_mark: |
+
+| 新特性                                                              | 支持               |
+| ------------------------------------------------------------------- | ------------------ |
+| 组件支持CamelCase和kebab-case命名方式引入(本文档采用大驼峰命名展示) | :white_check_mark: |
+| 重构为Vue3所支持的Composition Api                                   | :white_check_mark: |
+| 良好的typescript支持                                                | :white_check_mark: |
+| 完善部分方法Api的语义化,新增一些新的属性                            | :white_check_mark: |
 
 ### 开始使用
 
@@ -121,8 +128,6 @@ app.mount('#app')
 
 **重置动画。将显示值重置为起始值，并取消当前的**`requestAnimationFrame`。
 
-
-
 **方法完整使用示例**
 
 ```js
@@ -154,4 +159,3 @@ const numberScrollRefBasic = ref(null);
      numberScrollRefBasic.value.resume();
    };
 ```
-
