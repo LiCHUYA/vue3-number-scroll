@@ -49,7 +49,7 @@ const formatNumber = (num: number| any) => {
   const rgx = /(\d+)(\d{3})/
   let x1Formatted = x1
 
-  while (rgx.test(x1Formatted)) {
+  while (rgx.test(x1Formatted) && props.separator) {
     x1Formatted = x1Formatted.replace(rgx, '$1' + props.separator + '$2')
   }
 
